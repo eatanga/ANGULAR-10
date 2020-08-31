@@ -1,0 +1,22 @@
+<div class="container-fluid">
+    <h1>{{product.id == null ? 'Add' : 'Edit'}} Product - {{product.id}}</h1>
+
+<form>
+  <label for="name">Item Name</label>
+  <input type="text" class="form-control" id="name" placeholder="Item Name" [(ngModel)]="product.name" name="name">
+
+  <label for="brand">brand</label>
+  <input type="text" class="form-control" id="brand" placeholder="brand" name="brand" [(ngModel)]="product.brand">
+
+  <label for="price">Price</label>
+  <input type="text" class="form-control" id="price" placeholder="price" name="price" [(ngModel)]="product.price">
+
+
+    <br>
+    <input type="file" (change)="onFileChanged($event)">
+    <img [src]="imgURL" height="300" width="300" *ngIf="imgURL">
+
+  <br>
+  <button type="button" class="btn btn-success" (click)="saveProduct()">Save Item</button>
+</form>
+</div>

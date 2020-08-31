@@ -1,0 +1,28 @@
+<div class="container-fluid">
+    <h1>Item Details</h1>
+
+    <table>
+        <tr>
+            <td>product Id</td>
+            <td>{{product.id}}</td>
+        </tr>
+        <tr>
+            <td>product Name</td>
+            <td>{{product.name}}</td>
+        </tr>
+        <tr>
+            <td>product Brand</td>
+            <td>{{product.brand}}</td>
+        </tr>
+        <tr>
+            <td>product Price</td>
+            <td>{{product.price}}</td>
+        </tr>
+    </table>
+    <br>
+    <img src="{{product.retrievedImage}}" height="300" width="300">
+    <br><br>
+
+    <a class="btn btn-small btn-warning" (click)="editProduct()">edit</a>   
+    <a class="btn btn-small btn-danger" (click)="deleteProduct()">delete</a>
+</div>
